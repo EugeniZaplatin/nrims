@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Noris.Data.Entity.Directory">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <InheritanceLine Type="Noris.Data.Entity.BaseEntity" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="1.603" />
+        <Point X="3" Y="1.686" />
+        <Point X="2.51" Y="1.686" />
+        <Point X="2.51" Y="1.853" />
+        <Point X="1.25" Y="1.853" />
+        <Point X="1.25" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAABgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Directory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Noris.Data.Entity.BaseEntity">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\BaseEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Noris.Data.Entity.Record">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Noris.Data.Entity.BaseEntity" ManuallyRouted="true">
+      <Path>
+        <Point X="3" Y="1.603" />
+        <Point X="3" Y="1.686" />
+        <Point X="3.781" Y="1.686" />
+        <Point X="3.781" Y="1.853" />
+        <Point X="5" Y="1.853" />
+        <Point X="5" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IAAAABAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Entity\Record.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Noris.Data.Entity.DirectoryVersion">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Entity\DirectoryVersion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Noris.Data.Constants.RecordStatuses">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Constants\RecordStatuses.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

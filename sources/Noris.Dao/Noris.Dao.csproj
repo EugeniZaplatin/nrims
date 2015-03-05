@@ -7,8 +7,8 @@
     <ProjectGuid>{FCA1A4E1-0A1A-4CD4-8F6B-BF967F18E107}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Urish.Diagnostic.Dao</RootNamespace>
-    <AssemblyName>Urish.Diagnostic.Dao</AssemblyName>
+    <RootNamespace>Noris.Dao</RootNamespace>
+    <AssemblyName>Noris.Dao</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

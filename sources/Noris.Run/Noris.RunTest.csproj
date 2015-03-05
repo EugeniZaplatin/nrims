@@ -7,8 +7,8 @@
     <ProjectGuid>{7BF5BA19-3AEB-4AB9-B70A-2998E404B489}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Urish.Diagnostic.Run</RootNamespace>
-    <AssemblyName>Urish.Diagnostic.Run</AssemblyName>
+    <RootNamespace>Noris.RunTest</RootNamespace>
+    <AssemblyName>Noris.RunTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,11 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
