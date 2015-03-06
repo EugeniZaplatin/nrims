@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.Services", "Noris.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.RunTest", "Noris.Run\Noris.RunTest.csproj", "{7BF5BA19-3AEB-4AB9-B70A-2998E404B489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutlookCRM", "OutlookCRM1\OutlookCRM.csproj", "{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.WcfService", "Noris.WcfService\Noris.WcfService.csproj", "{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,14 +45,12 @@ Global
 		{7BF5BA19-3AEB-4AB9-B70A-2998E404B489}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BF5BA19-3AEB-4AB9-B70A-2998E404B489}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BF5BA19-3AEB-4AB9-B70A-2998E404B489}.Release|x86.ActiveCfg = Release|Any CPU
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Debug|x86.ActiveCfg = Debug|x86
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Debug|x86.Build.0 = Debug|x86
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Release|x86.ActiveCfg = Release|x86
-		{D40EA3A7-0811-44AB-838D-F08DAD06C5BE}.Release|x86.Build.0 = Release|x86
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
