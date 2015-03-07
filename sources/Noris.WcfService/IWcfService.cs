@@ -1,47 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
+using Noris.WcfService.Data;
 
 namespace Noris.Wcf
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    /// <summary>
+    /// 
+    /// </summary>
     [ServiceContract]
     public interface IWcfService
     {
 
+        /// <summary>
+        /// Return all records of directory categories
+        /// </summary>
+        /// <returns>list categories</returns>
         [OperationContract]
-        string GetData(int value);
+        IList<CategorySto> GetCategories();
 
+        /// <summary>
+        /// Return all records of directory
+        /// </summary>
+        /// <returns>list directories</returns>
         [OperationContract]
-        CompositeType GetDataUsingDataContract(CompositeType composite);
+        IList<DiectorySto> GetDirectories();
 
-        // TODO: Add your service operations here
+        /// <summary>
+        /// Return all records of directory from specified category
+        /// </summary>
+        /// <param name="categoryId">Directory identifier</param>
+        /// <returns>list pairs id and name of directories</returns>
+        [OperationContract]
+        IList<DiectorySto> GetDirectories(Guid categoryId);
+        
+        /// <summary>
+        /// Return all records of directory
+        /// </summary>
+        /// <param name="id">Directory identifier</param>
+        /// <returns></returns>
+        [OperationContract]
+        IList<RecordSto> GetDirectory(Guid id);
+
+        /// <summary>
+        /// Return all records of directory
+        /// </summary>
+        /// <param name="version">poin last update version of directory</param>
+        /// /// <param name="id">directory identifier</param>
+        /// <returns></returns>
+        [OperationContract]
+        IList<RecordSto> GetRecords(Guid id, string version);
+
+        /// <summary>
+        /// Return metadata of directory
+        /// </summary>
+        /// <param name="id">Directory identifier</param>
+        /// <returns>Description direstory structure</returns>
+        [OperationContract]
+        string GetDirectoryMetadata(Guid id);
+       
     }
 
-
-    // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
+   
+   
 }

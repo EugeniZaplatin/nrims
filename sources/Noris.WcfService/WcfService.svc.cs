@@ -7,22 +7,35 @@ namespace Noris.Wcf
     // NOTE: In order to launch WCF Test Client for testing this service, please select WcfService.svc or WcfService.svc.cs at the Solution Explorer and start debugging.
     public class WcfService : IWcfService
     {
-        public string GetData(int value)
+
+        public System.Collections.Generic.IList<Noris.WcfService.Data.CategorySto> GetCategories()
         {
-            return string.Format("You entered: {0}", value);
+            throw new NotImplementedException();
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public System.Collections.Generic.IList<Noris.WcfService.Data.DiectorySto> GetDirectories()
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            throw new NotImplementedException();
+        }
+
+        public System.Collections.Generic.IList<Noris.WcfService.Data.DiectorySto> GetDirectories(Guid categoryId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.Collections.Generic.IList<Noris.WcfService.Data.RecordSto> GetDirectory(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public System.Collections.Generic.IList<Noris.WcfService.Data.RecordSto> GetRecords(Guid id, string version)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetDirectoryMetadata(Guid id)
+        {
+            throw new NotImplementedException();
         }
     }
 }

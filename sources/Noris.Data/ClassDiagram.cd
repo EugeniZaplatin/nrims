@@ -13,7 +13,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACAAABgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAABAAAgAAAAAAAQAABAAAAAAgAAAAAAACAA=</HashCode>
       <FileName>Entity\Directory.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -37,7 +37,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>IAAAABAEAAAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <HashCode>IAAAABAEAAAAAAAAAAAgAAQAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>Entity\Record.cs</FileName>
     </TypeIdentifier>
   </Class>

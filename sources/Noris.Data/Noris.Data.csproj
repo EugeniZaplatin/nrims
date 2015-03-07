@@ -34,6 +34,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\DirectoryCategory.cs" />
     <Compile Include="Entity\DirectoryVersion.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\Directory.cs" />

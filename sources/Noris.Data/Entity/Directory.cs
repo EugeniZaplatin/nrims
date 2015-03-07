@@ -7,7 +7,15 @@
     {
         public string Name { get; set; }
 
-        public string Description { get; set; }
+        /// <summary>
+        /// Brief descrition display on list form
+        /// </summary>
+        public string BriefDescription { get; set; }
+
+        /// <summary>
+        /// Full descrition display on detail form
+        /// </summary>
+        public string FullDescription { get; set; }
 
         /// <summary>
         /// Any organization to whom belongs directory
@@ -18,5 +26,13 @@
         /// Person conducting directory
         /// </summary>
         public string Responser { get; set; }
+
+        /// <summary>
+        /// Email for feedback about eny errors, inuccuracies
+        /// </summary>
+        public string FeedbackEmail { get; set; }
+
+        public virtual DirectoryCategory Category { get; set; }
+
     }
 }

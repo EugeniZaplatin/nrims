@@ -63,15 +63,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DiectorySto.cs" />
+    <Compile Include="Data\CategorySto.cs" />
+    <Compile Include="Data\RecordSto.cs" />
+    <Compile Include="Data\BaseSto.cs" />
     <Compile Include="WcfService.svc.cs">
       <DependentUpon>WcfService.svc</DependentUpon>
     </Compile>
     <Compile Include="IWcfService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
