@@ -57,8 +57,6 @@
   <ItemGroup>
     <Compile Include="Api\IDao.cs" />
     <Compile Include="Api\IIdentifierProvider.cs" />
-    <Compile Include="SequentialGuidGenerator.cs" />
-    <Compile Include="IdentifierProvider.cs" />
     <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\DaoParametrs.cs" />
     <Compile Include="DbConnection.cs" />

@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Noris.Dao
+
+namespace Noris.Services.Utils
 {
     public enum SequentialGuidType
     {
@@ -14,6 +11,9 @@ namespace Noris.Dao
         SequentialAtEnd
     }
 
+    /// <summary>
+    /// Generator of unique sequence for Guid type on aplication side (not database side)
+    /// </summary>
     public class SequentialGuidGenerator
     {
         private readonly RNGCryptoServiceProvider _rng;
