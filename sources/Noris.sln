@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.WcfService", "Noris.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.Unity", "Noris.Unity\Noris.Unity.csproj", "{3A1AA6DE-A247-4608-BE13-79650A15AB58}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtimes", "Runtimes", "{5087AE39-880A-495B-B9C8-85B4B02DA08F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,5 +64,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BF5BA19-3AEB-4AB9-B70A-2998E404B489} = {5087AE39-880A-495B-B9C8-85B4B02DA08F}
+		{D25BFABE-2B27-4C15-8F4A-A834B9674B9A} = {5087AE39-880A-495B-B9C8-85B4B02DA08F}
 	EndGlobalSection
 EndGlobal
