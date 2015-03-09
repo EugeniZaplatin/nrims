@@ -31,7 +31,7 @@ namespace Noris.Wcf
         /// </summary>
         /// <param name="categoryId">Directory identifier</param>
         /// <returns>list pairs id and name of directories</returns>
-        [OperationContract]
+        [OperationContract(Name = "GetDirectoriesByCategory")]
         IList<DiectorySto> GetDirectories(Guid categoryId);
         
         /// <summary>

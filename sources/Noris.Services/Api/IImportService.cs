@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Noris.Services.Api
 {
-    interface IImportService
+    /// <summary>
+    /// Declarate methods for import directories from different sources and variose formats
+    /// </summary>
+    public interface IImportService
     {
     }
 }
