@@ -1,16 +1,14 @@
 ﻿
-namespace Noris.Data.Entity
+namespace Noris.Data.Dpo
 {
     /// <summary>
     /// Hierarchical categories of directories for grouping their
     /// </summary>
-    public class DirectoryCategory : BaseEntity
+    public class DirectoryCategoryDpo : BaseDpo
     {
-        public string Name { get; set; }
-
         /// <summary>
         /// Parent node of category
         /// </summary>
-        public virtual DirectoryCategory Parent { get; set; }
+        public DirectoryCategoryDpo Parent { get; set; }
     }
 }

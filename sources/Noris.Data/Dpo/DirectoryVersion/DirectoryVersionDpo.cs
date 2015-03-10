@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Noris.Data.Entity
+namespace Noris.Data.Dpo
 {
     /// <summary>
     /// Version of directory. Each record should has link to any directory version
     /// </summary>
-    public class DirectoryVersion : BaseEntity
+    public class DirectoryVersionDpo : BaseDpo
     {
         /// <summary>
         /// Record version in x.y.z.s format, ehat can be converted in Version type
@@ -14,8 +14,5 @@ namespace Noris.Data.Entity
 
         public DateTime VersionDate { get; set; }
 
-        public string Description { get; set; }
-        
-        public virtual Directory Directory { get; set; }
     }
 }
