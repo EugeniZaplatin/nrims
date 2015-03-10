@@ -35,18 +35,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\IInitiator.cs" />
+    <Compile Include="Dpo\_BaseDpo.cs" />
+    <Compile Include="Dto\_BaseDto.cs" />
     <Compile Include="Entity\DirectoryCategory.cs" />
     <Compile Include="Entity\DirectoryVersion.cs" />
-    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="Entity\_BaseEntity.cs" />
     <Compile Include="Entity\Directory.cs" />
+    <Compile Include="Filter\_BaseFilter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Record.cs" />
     <Compile Include="Constants\RecordStatuses.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dpo\" />
-    <Folder Include="Dto\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>

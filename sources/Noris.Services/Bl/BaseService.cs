@@ -4,13 +4,14 @@ using System.Linq;
 using AutoMapper;
 using Microsoft.Practices.Unity;
 using Noris.Dao.Api;
+using Noris.Data.Dpo;
 using Noris.Data.Entity;
 using Noris.Services.Attributes;
 
 namespace Noris.Services.Bl
 {
     /// <summary>
-    /// Specified fild in listing forms and deriction of sorting data
+    /// Specified field in listing forms and deriction of sorting data
     /// </summary>
     public class SortingInfo
     {
@@ -22,11 +23,12 @@ namespace Noris.Services.Bl
     /// Base class for all bisness entities which interact with database
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    /// <typeparam name="TDetail">Dto object for UI forms</typeparam>
+    /// <typeparam name="TDetail">Dpo object for UI forms</typeparam>
     /// <typeparam name="TRepo">Dao repository</typeparam>
     public abstract class BaseService<TEntity, TDetail, TRepo>
         where TEntity : BaseEntity
         where TRepo : IDao<TEntity>
+        where TDetail : BaseDpo
     {
         [Dependency]
         public TRepo Repository { get; set; }
