@@ -9,6 +9,6 @@ It has tree main fiatures.
 
 2. Create, modified and delete directories.
 
-3. Represent access to any SOAP client aplicationsto normative-reference information and upload full directories or its updates.
+3. Represent access to any SOAP client aplications to normative-reference information and upload full directories or its updates.
 
 System using universal method of saving records for all directories.
