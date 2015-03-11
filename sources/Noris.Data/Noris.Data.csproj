@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\IInitiator.cs" />
+    <Compile Include="Constants\RecordStatuses - Copy.cs" />
     <Compile Include="Dpo\DirectoryCategory\DirectoryCategoryDpo.cs" />
     <Compile Include="Dpo\DirectoryVersion\DirectoryVersionDetailDpo.cs" />
     <Compile Include="Dpo\DirectoryVersion\DirectoryVersionDpo.cs" />

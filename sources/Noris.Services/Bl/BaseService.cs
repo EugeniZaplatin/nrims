@@ -23,20 +23,20 @@ namespace Noris.Services.Bl
     /// Base class for all bisness entities which interact with database
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    /// <typeparam name="TDetail">Dpo object for UI forms</typeparam>
+    /// <typeparam name="TDpo">Dpo object for UI forms</typeparam>
     /// <typeparam name="TRepo">Dao repository</typeparam>
-    public abstract class BaseService<TEntity, TDetail, TRepo>
+    public abstract class BaseService<TEntity, TDpo, TRepo>
         where TEntity : BaseEntity
         where TRepo : IDao<TEntity>
-        where TDetail : BaseDpo
+        where TDpo : BaseDpo
     {
         [Dependency]
         public TRepo Repository { get; set; }
 
-        public TDetail Get(Guid id)
+        public TDpo Get(Guid id)
         {
             var entity = Repository.Get(id);
-            return Mapper.Map<TDetail>(entity);
+            return Mapper.Map<TDpo>(entity);
         }
 
         public virtual IQueryable<TEntity> Get(object filters, IList<SortingInfo> sorters)
@@ -53,23 +53,23 @@ namespace Noris.Services.Bl
         
 
         [Transactional]
-        public virtual TDetail Create(TDetail detailDto)
+        public virtual TDpo Create(TDpo detailDto)
         {
             var entity = Mapper.Map<TEntity>(detailDto);
             entity = Repository.Add(entity);
 
-            return Mapper.Map<TDetail>(entity);
+            return Mapper.Map<TDpo>(entity);
         }
 
         [Transactional]
-        public virtual TDetail Update(Guid id, TDetail detailDto)
+        public virtual TDpo Update(Guid id, TDpo detailDto)
         {
             var entity = Repository.Get(id);
 
             entity = Mapper.Map(detailDto, entity);
             entity = Repository.Update(entity);
 
-            return Mapper.Map<TDetail>(entity);
+            return Mapper.Map<TDpo>(entity);
         }
 
         [Transactional]
