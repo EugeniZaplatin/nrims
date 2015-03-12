@@ -1,12 +1,12 @@
 ﻿using Noris.Data.Constants;
 
 
-namespace Noris.Data.Dpo
+namespace Noris.Data.Dto
 {
     /// <summary>
-    /// Record of any directory
+    /// Record of any directory for exchange with external applications
     /// </summary>
-    public class RecordDpo : BaseDpo
+    public class RecordDto : BaseDto
     {
         /// <summary>
         /// Unique code of records
@@ -19,12 +19,6 @@ namespace Noris.Data.Dpo
         /// Content contain verious object with different additional properties depending on directory
         /// </summary>
         public dynamic Contents { get; set; }
-
-        /// <summary>
-        /// Directory which record owned
-        /// </summary>
-        public  DirectoryDpo DirectoryDpo { get; set; }
-
-        public  DirectoryVersionDpo VersionDpo { get; set; }
+       
     }
 }
