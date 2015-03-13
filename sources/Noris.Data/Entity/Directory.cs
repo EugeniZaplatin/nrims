@@ -8,6 +8,12 @@
         public string Name { get; set; }
 
         /// <summary>
+        /// Description directory structure in Xml format
+        /// Based on this structure, will be created directory record class
+        /// </summary>
+        public string XmlStructere { get; set; }
+
+        /// <summary>
         /// Brief descrition display on list form
         /// </summary>
         public string BriefDescription { get; set; }
