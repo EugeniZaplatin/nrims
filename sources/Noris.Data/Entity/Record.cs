@@ -18,7 +18,7 @@ namespace Noris.Data.Entity
         public RecordStatuses Status { get; set; }
 
         /// <summary>
-        /// Content in json format what contain fild name with value additional properties
+        /// Content in json or xml formats what contain fild name with value additional properties
         /// </summary>
         public string Contents { get; set; }
 
