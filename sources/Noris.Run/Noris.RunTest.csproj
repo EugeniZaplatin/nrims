@@ -47,6 +47,10 @@
       <Project>{ec92ad6d-ccba-4092-9c59-11556f8c8b98}</Project>
       <Name>Noris.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Noris.Services\Noris.Services.csproj">
+      <Project>{cdb19c57-6342-4bfa-84a0-a0d9e3833921}</Project>
+      <Name>Noris.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

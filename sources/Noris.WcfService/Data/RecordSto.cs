@@ -20,8 +20,8 @@ namespace Noris.WcfService.Data
         [DataMember]
         public string Name { get; set; }
 
-        //[DataMember]
-        //public dynamic Content { get; set; }
+        [DataMember]
+        public dynamic Content { get; set; }
 
 
     }

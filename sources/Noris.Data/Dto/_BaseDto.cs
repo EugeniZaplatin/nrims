@@ -5,6 +5,7 @@
     /// </summary>
     public abstract class BaseDto
     {
+        public string Name { get; set; }
 
     }
 }
