@@ -15,7 +15,7 @@ namespace Noris.Services.Utils
             element = XElement.Load(filename);
         }
 
-        private DynamicClassBuilder(XElement el)
+        public DynamicClassBuilder(XElement el)
         {
             element = el;
         }
@@ -38,6 +38,26 @@ namespace Noris.Services.Utils
             else
             {
                 result = new DynamicClassBuilder(sub);
+                return true;
+            }
+        }
+
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            if (element == null)
+            {
+                return false;
+            }
+
+            XElement sub = element.Element(binder.Name);
+
+            if (sub == null)
+            {
+                return false;
+            }
+            else
+            {
+                sub.SetValue(value);
                 return true;
             }
         }

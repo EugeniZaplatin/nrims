@@ -1,10 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Dynamic;
+using System.Xml.Linq;
 using Noris.Data.Dto;
 using Noris.Data.Entity;
 using Noris.Services.Utils;
+using Directory = Noris.Data.Entity.Directory;
 
 namespace Urish.Diagnostic.Run
 {
@@ -22,18 +26,34 @@ namespace Urish.Diagnostic.Run
                     Name = "Medical directories"
                 },
                 XmlStructere =
-                    "<content > <customer><name>Wile E Coyote</name><address>The Desert</address></customer> " +
-                    "<orderItem><product>Rocket Powered Rollerskates</product>" +
-                    "<quantity>1</quantity><supplier>Acme Inc</supplier></orderItem></content>"
+                    "<filds>" +
+                        "<prop>" +
+                            "<name>Eugeny</name>" +
+                            "<address>Vesennay</address>" +
+                            "<product>Gold</product>" +
+                            "<quantity>3</quantity>" +
+                            "<supplier>Any</supplier>" +
+                        "</prop>" +
+                    "</filds>"
             };
-
+           
             var record = new RecordDto
             {
                 Code = "123",
                 Name = "AnyName"
             };
 
-            record.Contents = new DynamicClassBuilder(directory.XmlStructere); //TODO change with  parsing string to Xelement
+            var xElement = XElement.Load(new MemoryStream(Encoding.UTF8.GetBytes(directory.XmlStructere)));
+
+            record.Contents = new DynamicClassBuilder(xElement); //TODO change with  parsing string to Xelement
+
+           Console.WriteLine("{0} : {1}", record.Contents.prop.name, record.Contents.prop.quantity);
+
+            record.Contents.prop.name = "Olga";
+
+            Console.WriteLine("{0} : {1}", record.Contents.prop.name, record.Contents.prop.quantity);
+
+            Console.ReadKey();
 
         }
     }
