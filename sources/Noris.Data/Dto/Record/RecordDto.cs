@@ -1,4 +1,5 @@
-﻿using Noris.Data.Constants;
+﻿using System;
+using Noris.Data.Constants;
 
 
 namespace Noris.Data.Dto
@@ -6,6 +7,7 @@ namespace Noris.Data.Dto
     /// <summary>
     /// Record of any directory for exchange with external applications
     /// </summary>
+    [Serializable]
     public class RecordDto : BaseDto
     {
         /// <summary>
@@ -18,6 +20,7 @@ namespace Noris.Data.Dto
         /// <summary>
         /// Content contain verious object with different additional properties depending on directory
         /// </summary>
+        
         public dynamic Contents { get; set; }
        
     }

@@ -1,4 +1,5 @@
 ﻿using System.Dynamic;
+using System.Runtime.Serialization;
 using System.Xml.Linq;
 
 namespace Noris.Services.Utils
@@ -6,29 +7,34 @@ namespace Noris.Services.Utils
     /// <summary>
     /// Building dynamic part of directory record structure
     /// </summary>
-    public class DynamicClassBuilder : DynamicObject
+    [DataContract]
+    public class DynamicXml : DynamicObject
     {
-        XElement element;
+        [DataMember]
+        XElement _element;
 
-        public DynamicClassBuilder(string filename)
+        public DynamicXml()
+        { }
+
+        public DynamicXml(string filename)
         {
-            element = XElement.Load(filename);
+            _element = XElement.Load(filename);
         }
 
-        public DynamicClassBuilder(XElement el)
+        public DynamicXml(XElement el)
         {
-            element = el;
+            _element = el;
         }
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
-            if (element == null)
+            if (_element == null)
             {
                 result = null;
                 return false;
             }
 
-            XElement sub = element.Element(binder.Name);
+            XElement sub = _element.Element(binder.Name);
 
             if (sub == null)
             {
@@ -37,19 +43,19 @@ namespace Noris.Services.Utils
             }
             else
             {
-                result = new DynamicClassBuilder(sub);
+                result = new DynamicXml(sub);
                 return true;
             }
         }
 
         public override bool TrySetMember(SetMemberBinder binder, object value)
         {
-            if (element == null)
+            if (_element == null)
             {
                 return false;
             }
 
-            XElement sub = element.Element(binder.Name);
+            XElement sub = _element.Element(binder.Name);
 
             if (sub == null)
             {
@@ -64,9 +70,9 @@ namespace Noris.Services.Utils
 
         public override string ToString()
         {
-            if (element != null)
+            if (_element != null)
             {
-                return element.Value;
+                return _element.Value;
             }
             else
             {
@@ -78,12 +84,12 @@ namespace Noris.Services.Utils
         {
             get
             {
-                if (element == null)
+                if (_element == null)
                 {
                     return string.Empty;
                 }
 
-                return element.Attribute(attr).Value;
+                return _element.Attribute(attr).Value;
             }
         }
     }
