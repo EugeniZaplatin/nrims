@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\Record.cs" />
     <Compile Include="Constants\RecordStatuses.cs" />
+    <Compile Include="Sto\RecordSto.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
