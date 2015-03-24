@@ -1,27 +1,39 @@
-﻿using System.Dynamic;
+﻿using System.Collections.Generic;
+using System.Dynamic;
 using System.Runtime.Serialization;
 using System.Xml.Linq;
 
-namespace Noris.Services.Utils
+
+namespace Noris.Data.Sto
 {
     /// <summary>
-    /// Building dynamic part of directory record structure
+    /// Universal record of veriouse directories for export data
+    /// on reqest client system
     /// </summary>
     [DataContract]
-    public class DynamicXml : DynamicObject
+    public class DynamicSto : DynamicObject
     {
+        [DataMember]
+        public string name { get; set; }
+
+        [DataMember]
+        public string code { get; set; }
+
+        [DataMember]
+        public string version { get; set; }
+
         [DataMember]
         XElement _element;
 
-        public DynamicXml()
+        public DynamicSto()
         { }
 
-        public DynamicXml(string filename)
+        public DynamicSto(string filename)
         {
             _element = XElement.Load(filename);
         }
 
-        public DynamicXml(XElement el)
+        public DynamicSto(XElement el)
         {
             _element = el;
         }
@@ -41,11 +53,10 @@ namespace Noris.Services.Utils
                 result = null;
                 return false;
             }
-            else
-            {
-                result = new DynamicXml(sub);
-                return true;
-            }
+            
+            result = new DynamicSto(sub);
+            return true;
+            
         }
 
         public override bool TrySetMember(SetMemberBinder binder, object value)
@@ -67,7 +78,6 @@ namespace Noris.Services.Utils
                 return true;
             }
         }
-
         public override string ToString()
         {
             if (_element != null)
@@ -93,4 +103,5 @@ namespace Noris.Services.Utils
             }
         }
     }
+
 }

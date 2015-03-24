@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml.Linq;
 using Newtonsoft.Json;
+using Noris.Data;
 using Noris.Data.Dto;
 using Noris.Data.Entity;
 using Noris.Data.Sto;
@@ -96,30 +97,29 @@ namespace Urish.Diagnostic.Run
                 Contents = JsonConvert.DeserializeObject<DynamicXml>(x.Contents)
             }));
 
-            var ExportRecords = new List<RecordSto>();
+            var ExportRecords = new List<DynamicSto>();
             
             
             
             foreach (RecordDto record in _records)
             {
-                dynamic dyn = new RecordSto
+                dynamic dyn = new DynamicSto(xElement)
                 {
                      name = record.Name,
                      code = record.Code,
-                     version = record.Contents.product
+                     version = ""
                 };
 
-               
-
                 ExportRecords.Add(dyn);
-                
 
                 Console.WriteLine();
                 Console.WriteLine("{0} ::: {1}",  record.Contents.product, record.Contents.quantity);
-                Console.WriteLine();
+                Console.WriteLine(JsonConvert.SerializeObject(dyn));
             }
 
+            dynamic d = new {pico = "erwer", memo = "ok"};
 
+            Console.WriteLine(JsonConvert.SerializeObject(d));
 
             Console.ReadKey();
 
