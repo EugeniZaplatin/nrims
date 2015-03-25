@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
+using System.Xml;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 using Noris.Data;
@@ -32,12 +30,49 @@ namespace Urish.Diagnostic.Run
                 },
                 XmlStructere =
                     "<filds>" +
-                        "<address></address>" +
+                        "<address>Весення</address>" +
                         "<product></product>" +
                         "<quantity></quantity>" +
                         "<supplier></supplier>" +
                     "</filds>"
             };
+            string _xml = 
+                "<root>" +
+                    "<column name=\"FirstName\">Miron</column>" +
+                    "<column name=\"LastName\">Abramson</column>" +
+                    "<column name=\"Blog\">www.blog.mironabramson.com</column>" +
+                "</root>";
+
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.LoadXml(_xml);
+
+            dynamic newObject = DynamicObjectBuilder.CreateOurNewObject(xmlDoc, typeof(RecordDtoExample));
+
+            newObject.FirstName = "Евгений";
+            newObject.LastName = "Заплатин";
+            newObject.Name = "Программист";
+            newObject.Code = "234";
+
+            Console.WriteLine(newObject.FirstName);
+            Console.WriteLine(newObject.LastName);
+            Console.WriteLine(newObject.Blog);
+            Console.WriteLine(newObject.Name);
+            Console.WriteLine(newObject.Code);
+
+            
+            var str = JsonConvert.SerializeObject(newObject);
+            
+            Console.WriteLine(str);
+
+            var _newObject = JsonConvert.DeserializeObject(str, newObject.GetType());
+
+            Console.WriteLine(_newObject.FirstName);
+            Console.WriteLine(_newObject.LastName);
+            Console.WriteLine(_newObject.Blog);
+
+             str = JsonConvert.SerializeObject(newObject);
+
+            Console.WriteLine(str);
 
             var records = new List<RecordDto>();
             

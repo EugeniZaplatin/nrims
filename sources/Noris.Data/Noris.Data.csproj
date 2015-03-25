@@ -46,6 +46,7 @@
     <Compile Include="Dpo\Directory\DirectoryDpo.cs" />
     <Compile Include="Dpo\Record\RecordDpo.cs" />
     <Compile Include="Dpo\_BaseDpo.cs" />
+    <Compile Include="Dto\Record\RecordDto - Copy.cs" />
     <Compile Include="Dto\Record\RecordDto.cs" />
     <Compile Include="Dto\_BaseDto.cs" />
     <Compile Include="Entity\DirectoryCategory.cs" />
