@@ -10,7 +10,11 @@ namespace Noris.Dao
     [Configuration]
     public class DbConnection : DbContext
     {
-        public DbConnection()
+        public DbConnection():base("DefaultConnection")
+        {
+            
+        }
+        public DbConnection(string connectionString):base(connectionString)
         {
         }
 
@@ -20,14 +24,13 @@ namespace Noris.Dao
             //...
         }
 
-        public virtual DbSet<TEntity> GetSet<TEntity>() 
+        public virtual DbSet<TEntity> GetSet<TEntity>()
             where TEntity : BaseEntity
         {
             return this.Set<TEntity>();
         }
 
-        
-
+        public DbSet<Record> Records { get; set; }
     }
 
 }

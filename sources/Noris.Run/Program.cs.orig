@@ -1,4 +1,5 @@
 ﻿using System;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -11,7 +12,8 @@ using Noris.Data.Entity;
 using Noris.Data.Sto;
 using Noris.Services.Utils;
 using Directory = Noris.Data.Entity.Directory;
-using System;
+
+=======
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.IO;
@@ -19,7 +21,7 @@ using System.Linq;
 using Noris.Dao;
 using Noris.Dao.Migrations;
 using Noris.Data.Entity;
-
+>>>>>>> origin/feature/#2
 
 namespace Urish.Diagnostic.Run
 {
@@ -27,6 +29,7 @@ namespace Urish.Diagnostic.Run
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
 
             var directory = new Directory
             {
@@ -166,9 +169,8 @@ namespace Urish.Diagnostic.Run
 
             Console.ReadKey();
 
-        }
-
-           var currentCatalog = Path.GetDirectoryName(typeof(Program).Assembly.Location.TrimEnd('\\', '/'));
+=======
+            var currentCatalog = Path.GetDirectoryName(typeof(Program).Assembly.Location.TrimEnd('\\', '/'));
             AppDomain.CurrentDomain.SetData("DataDirectory", currentCatalog);
             Database.SetInitializer(new CreateDatabaseIfNotExists<DbConnection>());
             try
@@ -198,6 +200,8 @@ namespace Urish.Diagnostic.Run
             catch (Exception ex)
             {
                 throw;
-
+            }
+>>>>>>> origin/feature/#2
+        }
     }
 }
