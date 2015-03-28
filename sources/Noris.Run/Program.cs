@@ -1,12 +1,4 @@
-﻿using System;
-using System.IO;
-using Noris.Data.Entity;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using Noris.Dao;
-using Noris.Dao.Migrations;
-using Noris.RunTest;
+﻿using Noris.RunTest;
 
 
 namespace Urish.Diagnostic.Run
@@ -15,9 +7,11 @@ namespace Urish.Diagnostic.Run
     {
         private static void Main(string[] args)
         {
-            TestWithDynamicType.CreateDynamic();
-
             TestLocalDb.WorkWithLocalDb();
+
+            TestWithDynamicType.CreateDynamic();
         }
+
+
     }
 }

@@ -7,8 +7,8 @@
     <ProjectGuid>{FCA1A4E1-0A1A-4CD4-8F6B-BF967F18E107}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Noris.Dao</RootNamespace>
-    <AssemblyName>Noris.Dao</AssemblyName>
+    <RootNamespace>Noris.LocalDb</RootNamespace>
+    <AssemblyName>Noris.LocalDb</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -70,10 +70,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\IDao.cs" />
-    <Compile Include="Api\IIdentifierProvider.cs" />
     <Compile Include="Dao\BaseDao.cs" />
-    <Compile Include="Dao\DaoParametrs.cs" />
     <Compile Include="DbConnection.cs" />
     <Compile Include="Migrations\201503261742186_Initial.cs" />
     <Compile Include="Migrations\201503261742186_Initial.Designer.cs">
@@ -90,9 +87,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Noris.Data\Noris.Data.csproj">
+    <ProjectReference Include="..\Noris.Data\Noris.Api.csproj">
       <Project>{ec92ad6d-ccba-4092-9c59-11556f8c8b98}</Project>
-      <Name>Noris.Data</Name>
+      <Name>Noris.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\Noris.Unity\Noris.Unity.csproj">
       <Project>{3a1aa6de-a247-4608-be13-79650a15ab58}</Project>

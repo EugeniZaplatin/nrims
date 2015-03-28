@@ -8,11 +8,7 @@ namespace Noris.Data.Dto
     /// </summary>
     public class RecordDto : BaseDto
     {
-        /// <summary>
-        /// Unique code of records
-        /// </summary>
-        public string Code { get; set; }
-
+        
         public RecordStatuses Status { get; set; }
 
         /// <summary>

@@ -23,44 +23,16 @@ namespace Noris.Dao.Dao
         [Dependency]
         public IIdentifierProvider IdentifierProvider { get; set; }
 
+        /// <summary>
+        /// Cached big valume data for prevent repeat loading from db
+        /// This cache refreshed with adding or modified data
+        /// </summary>
         protected IList<TEntity> Cache;
 
-        /// <summary>Произвольный набор параметров, позволяющий уточнить характер выполнения
-        /// того или иного метода
-        /// </summary>
-
-        /// <summary>
-        /// Производит очитку кэша
-        /// </summary>
         public void CacheClear()
         {
             Cache.Clear();
             Cache = null;
-        }
-
-        /// <summary>Переопределяется при необходимости
-        /// подгрузки свойств из внешних контекстов
-        /// </summary>
-        public virtual TEntity Finalise(TEntity entity)
-        {
-            if (entity == null) throw new ArgumentNullException("entity");
-            return entity;
-        }
-
-        /// <summary>Позволяет прогружать отдельные свойства с типами внешних
-        /// по отношению сущностей, что в целом ускоряет процесс финализации
-        /// </summary>
-        /// <param name="id">идентификатор свойства, наприер PersonId в Patient</param>
-        /// <returns></returns>
-        public virtual TEntity Finalise(Guid id)
-        {
-            return Finalise(Get(id));
-        }
-
-        public virtual IList<TEntity> Finalise(IQueryable<TEntity> query)
-        {
-            if (query == null) throw new ArgumentNullException("query");
-            return query.Select(x => Finalise(x)).ToList();
         }
 
         public virtual TEntity Add(TEntity entity)
@@ -81,7 +53,7 @@ namespace Noris.Dao.Dao
             return result;
         }
 
-        /// <summary> TODO подумать как лучше реализовать
+        /// <summary> TODO need optimizate
         /// </summary>
         public virtual IList<TEntity> Add(IList<TEntity> entityList)
         {
@@ -136,7 +108,7 @@ namespace Noris.Dao.Dao
         }
 
         /// <summary>
-        /// TODO переписать метод в котором не будет производится фактическое удаление данных
+        /// TODO modified method for prevent removing object
         /// </summary>
         /// <param name="entity"></param>
         public virtual void Delete(TEntity entity)

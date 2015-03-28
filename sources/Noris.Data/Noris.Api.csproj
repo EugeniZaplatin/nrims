@@ -7,8 +7,8 @@
     <ProjectGuid>{EC92AD6D-CCBA-4092-9C59-11556F8C8B98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Noris.Data</RootNamespace>
-    <AssemblyName>Noris.Data</AssemblyName>
+    <RootNamespace>Noris.Api</RootNamespace>
+    <AssemblyName>Noris.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -37,7 +37,11 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\IInitiator.cs" />
+    <Compile Include="Dao\DaoParametrs.cs" />
+    <Compile Include="Dao\Idao.cs" />
+    <Compile Include="Dao\IIdentifierProvider.cs" />
+    <Compile Include="Services\IImportService.cs" />
+    <Compile Include="IInitiator.cs" />
     <Compile Include="Constants\ImportResults.cs" />
     <Compile Include="Dpo\DirectoryCategory\DirectoryCategoryDpo.cs" />
     <Compile Include="Dpo\DirectoryVersion\DirectoryVersionDetailDpo.cs" />
@@ -46,7 +50,7 @@
     <Compile Include="Dpo\Directory\DirectoryDpo.cs" />
     <Compile Include="Dpo\Record\RecordDpo.cs" />
     <Compile Include="Dpo\_BaseDpo.cs" />
-    <Compile Include="Dto\Record\RecordDto - Copy.cs" />
+    <Compile Include="Dto\Record\RecordDtoExample.cs" />
     <Compile Include="Dto\Record\RecordDto.cs" />
     <Compile Include="Dto\_BaseDto.cs" />
     <Compile Include="Entity\DirectoryCategory.cs" />

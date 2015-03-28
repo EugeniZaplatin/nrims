@@ -7,5 +7,10 @@
     {
         public string Name { get; set; }
 
+        /// <summary>
+        /// Unique code of records
+        /// </summary>
+        public string Code { get; set; }
+
     }
 }
