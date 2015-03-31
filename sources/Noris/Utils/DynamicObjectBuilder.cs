@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Xml;
-using System.Xml.Linq;
 
-namespace Noris.Services.Utils
+
+namespace Noris.Utils
 {
     public  class DynamicObjectBuilder
     {
-
-
-
         public static object CreateOurNewObject(XmlDocument xDoument, Type type)
         {
             // create a dynamic assembly and module 

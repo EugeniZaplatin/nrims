@@ -5,12 +5,14 @@ using System.Text;
 using System.Xml;
 using System.Xml.Linq;
 using Newtonsoft.Json;
+using Noris.Utils;
 using Noris.Data;
 using Noris.Data.Dto;
 using Noris.Data.Entity;
 using Noris.Data.Sto;
 using Noris.Services.Utils;
 using Directory = Noris.Data.Entity.Directory;
+using DynamicObjectBuilder = Noris.Utils.DynamicObjectBuilder;
 
 
 namespace Noris.RunTest

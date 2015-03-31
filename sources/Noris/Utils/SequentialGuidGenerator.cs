@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 
 
-namespace Noris.Services.Utils
+namespace Noris.Utils
 {
     public enum SequentialGuidType
     {

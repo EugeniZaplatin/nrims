@@ -5,7 +5,7 @@ using System.Threading;
 using Noris.Dao.Api;
 using Noris.Unity.Attributes;
 
-namespace Noris.Services.Utils
+namespace Noris.Utils
 {
     /// <summary>
     /// Provide generation unique value for Guid type structure

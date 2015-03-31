@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using Noris.Data.Dto;
 using Noris.Services.Utils;
-using Utils;
+using Noris.Utils;
 
 namespace Noris.WindowsForms
 {
@@ -62,8 +55,16 @@ namespace Noris.WindowsForms
 
             //DataTable table = listEnumer.ToDataTable();
 
+            try
+            {
+                dataGridView1.DataSource = list;
+            }
+            catch (Exception ex)
+            {
+                
+                Console.WriteLine(ex.Message);
+            }
             
-            dataGridView1.DataSource = list;
 
 
         }

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Principal;
-using Moq;
 using Microsoft.Practices.Unity;
 using System.Linq;
 using System.Reflection;
-using Noris.Unity.Api;
 using Noris.Unity.Attributes;
 
-namespace Noris.Core.Unity.Config
+namespace Noris.Unity
 {
     /// <summary>
     /// Собирает по всему проекту классы, в которых есть атрибут, описывающий внедрение зависимостей и регистрирует их в Unity контейнере
@@ -95,26 +93,9 @@ namespace Noris.Core.Unity.Config
                     container.Resolve(x.type, null);
             }));
 
-            foreach (var interfaceType in temp
-                .Where(t => t.IsInterface && t.GetCustomAttribute<FakeImplementableAttribute>() != null))
-            {
-                // проверка, если для интерфейса уже есть его регистрация в контейнере, то не выполнять 
-                // регистрацию фэйковой реализации
-                if (!container.Registrations.Select(o => o.RegisteredType).Contains(interfaceType))
-                {
-                    container.RegisterInstance(interfaceType, CreateFaceForInterface(interfaceType),
-                    new ContainerControlledLifetimeManager());
-                }
-                
-            }
+            
         }
 
-        private static object CreateFaceForInterface(Type interfaceType)
-        {
-            var constructorInfo = typeof(Mock<>).MakeGenericType(interfaceType).GetConstructor(new Type[0]);
-            if (constructorInfo == null) return null;
-            var fake = (Mock)constructorInfo.Invoke(new object[0]);
-            return fake.Object;
-        }
+        
     }
 }
