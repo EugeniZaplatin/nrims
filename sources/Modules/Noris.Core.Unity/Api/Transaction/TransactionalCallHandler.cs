@@ -1,6 +1,4 @@
-﻿using Noris.Dao;
-
-namespace Noris.Services.Attributes
+﻿namespace Noris.Utils.Transaction
 {
     using Microsoft.Practices.Unity;
     using Microsoft.Practices.Unity.InterceptionExtension;

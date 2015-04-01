@@ -1,6 +1,7 @@
 ﻿using System.Data.Entity;
-using Noris.Data.Entity;
 using Noris.Unity.Attributes;
+using Noris.Data.Entity;
+
 
 namespace Noris.Dao
 {

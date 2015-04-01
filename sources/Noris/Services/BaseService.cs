@@ -6,7 +6,7 @@ using Microsoft.Practices.Unity;
 using Noris.Dao.Api;
 using Noris.Data.Dpo;
 using Noris.Data.Entity;
-using Noris.Services.Attributes;
+
 
 namespace Noris.Services.Bl
 {
@@ -52,7 +52,7 @@ namespace Noris.Services.Bl
         }
         
 
-        [Transactional]
+
         public virtual TDpo Create(TDpo detailDto)
         {
             var entity = Mapper.Map<TEntity>(detailDto);
@@ -61,7 +61,7 @@ namespace Noris.Services.Bl
             return Mapper.Map<TDpo>(entity);
         }
 
-        [Transactional]
+
         public virtual TDpo Update(Guid id, TDpo detailDto)
         {
             var entity = Repository.Get(id);
@@ -72,7 +72,7 @@ namespace Noris.Services.Bl
             return Mapper.Map<TDpo>(entity);
         }
 
-        [Transactional]
+
         public virtual void Delete(Guid id)
         {
             var entity = Repository.Get(id);

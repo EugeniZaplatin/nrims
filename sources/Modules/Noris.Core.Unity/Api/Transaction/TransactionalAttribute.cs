@@ -1,13 +1,10 @@
-﻿
-namespace Noris.Services.Attributes
-{
-    using System;
-    using Microsoft.Practices.Unity;
-    using Microsoft.Practices.Unity.InterceptionExtension;
+﻿using Noris.Utils.Transaction;
+using System;
+using Microsoft.Practices.Unity;
+using Microsoft.Practices.Unity.InterceptionExtension;
 
-    /// <summary>
-    /// Hang to methods what interact with database for create, delete, update data
-    /// </summary>
+namespace Noris.Unity.Attributes
+{
     [AttributeUsage(AttributeTargets.Method)]
     public class TransactionalAttribute : HandlerAttribute
     {

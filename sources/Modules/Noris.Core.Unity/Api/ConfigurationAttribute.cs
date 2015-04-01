@@ -2,9 +2,6 @@
 {
     using System;
 
-    /// <summary>
-    /// Attribute for any configuration classes
-    /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
     public class ConfigurationAttribute : ComponentAttribute
     {

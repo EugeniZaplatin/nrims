@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Noris.Unity.Api
+namespace Urish.Unity.Api
 {
     [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
     public class FakeImplementableAttribute : Attribute

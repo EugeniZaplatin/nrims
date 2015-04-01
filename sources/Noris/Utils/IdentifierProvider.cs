@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using Noris.Dao.Api;
 using Noris.Unity.Attributes;
+using Noris.Dao.Api;
+
 
 namespace Noris.Utils
 {
