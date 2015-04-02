@@ -49,12 +49,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\FakeImplementableAttribute.cs" />
+    <Compile Include="Attributes\FakeImplementableAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Api\ComponentAttribute.cs" />
-    <Compile Include="Api\ConfigurationAttribute.cs" />
-    <Compile Include="Api\RepositoryAttribute.cs" />
-    <Compile Include="Api\ServiceAttribute.cs" />
+    <Compile Include="Attributes\ComponentAttribute.cs" />
+    <Compile Include="Attributes\ConfigurationAttribute.cs" />
+    <Compile Include="Attributes\RepositoryAttribute.cs" />
+    <Compile Include="Attributes\ServiceAttribute.cs" />
+    <Compile Include="UnityConfigurer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

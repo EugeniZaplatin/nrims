@@ -5,7 +5,7 @@ using Microsoft.Practices.Unity;
 using System.Linq;
 using System.Reflection;
 
-namespace Noris.Core.Unity.Config
+namespace Noris.Core.Unity
 {
     /// <summary>
     /// Собирает по всему проекту классы, в которых есть атрибут, описывающий внедрение зависимостей и регистрирует их в Unity контейнере

@@ -106,10 +106,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modules\Noris.Core.Unity.Config\Noris.Unity.Config.csproj">
-      <Project>{3a1aa6de-a247-4608-be13-79650a15ab58}</Project>
-      <Name>Noris.Unity.Config</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Modules\Noris.Core.Unity\Noris.Unity.csproj">
       <Project>{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}</Project>
       <Name>Noris.Unity</Name>

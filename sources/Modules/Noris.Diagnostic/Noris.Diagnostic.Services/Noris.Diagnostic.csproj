@@ -79,10 +79,6 @@
       <Project>{ec92ad6d-ccba-4092-9c59-11556f8c8b98}</Project>
       <Name>Noris.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Noris.Core.Unity.Config\Noris.Unity.Config.csproj">
-      <Project>{3a1aa6de-a247-4608-be13-79650a15ab58}</Project>
-      <Name>Noris.Unity.Config</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Noris.Core.Unity\Noris.Unity.csproj">
       <Project>{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}</Project>
       <Name>Noris.Unity</Name>
