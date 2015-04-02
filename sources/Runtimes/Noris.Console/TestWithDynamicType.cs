@@ -29,7 +29,7 @@ namespace Noris.RunTest
                 {
                     Name = "Medical directories"
                 },
-                XmlStructere =
+                XmlStructure =
                     "<filds>" +
                         "<address>Весення</address>" +
                         "<product></product>" +
@@ -90,7 +90,7 @@ namespace Noris.RunTest
             });
 
             int Counter = 1;
-            var xElement = XElement.Load(new MemoryStream(Encoding.UTF8.GetBytes(directory.XmlStructere)));
+            var xElement = XElement.Load(new MemoryStream(Encoding.UTF8.GetBytes(directory.XmlStructure)));
 
             foreach (var record in records)
             {

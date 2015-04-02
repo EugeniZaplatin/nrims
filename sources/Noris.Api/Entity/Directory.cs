@@ -11,7 +11,7 @@
         /// Description directory structure in Xml format
         /// Based on this structure, will be created directory record class
         /// </summary>
-        public string XmlStructere { get; set; }
+        public string XmlStructure { get; set; }
 
         /// <summary>
         /// Brief descrition display on list form

@@ -38,8 +38,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dao\DaoParametrs.cs" />
-    <Compile Include="Dao\Idao.cs" />
+    <Compile Include="Dao\IDao.cs" />
+    <Compile Include="Dao\IDirectoryCategoryDao.cs" />
+    <Compile Include="Dao\IDirectoryVersionDao.cs" />
+    <Compile Include="Dao\IRecordDao.cs" />
     <Compile Include="Dao\IIdentifierProvider.cs" />
+    <Compile Include="Dao\IDirectoryDao.cs" />
     <Compile Include="Services\IImportService.cs" />
     <Compile Include="IInitiator.cs" />
     <Compile Include="Constants\ImportResults.cs" />

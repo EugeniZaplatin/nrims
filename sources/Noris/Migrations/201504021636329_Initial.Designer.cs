@@ -13,7 +13,7 @@ namespace Noris.Dao.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201503261742186_Initial"; }
+            get { return "201504021636329_Initial"; }
         }
         
         string IMigrationMetadata.Source
