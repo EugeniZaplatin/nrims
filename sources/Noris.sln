@@ -29,8 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{AE73
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.Unity", "Modules\Noris.Core.Unity\Noris.Unity.csproj", "{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noris.Unity.Config", "Modules\Noris.Core.Unity.Config\Noris.Unity.Config.csproj", "{3A1AA6DE-A247-4608-BE13-79650A15AB58}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,12 +97,6 @@ Global
 		{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B9E7C55E-FFB8-4BFD-9384-299D225AC74B}.Release|x86.ActiveCfg = Release|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -119,6 +111,5 @@ Global
 		{D37F66F7-97D2-4F89-9BB8-150759C86BE3} = {4F725F9E-0D32-43A0-8469-B8C220982A4D}
 		{CDB19C57-6342-4BFA-84A0-A0D9E3833921} = {4F725F9E-0D32-43A0-8469-B8C220982A4D}
 		{B9E7C55E-FFB8-4BFD-9384-299D225AC74B} = {AE73FFC2-3ECD-4B1A-A706-51779FCE7AF8}
-		{3A1AA6DE-A247-4608-BE13-79650A15AB58} = {AE73FFC2-3ECD-4B1A-A706-51779FCE7AF8}
 	EndGlobalSection
 EndGlobal
