@@ -9,7 +9,7 @@ namespace Urish.Diagnostic.Run
         {
             TestLocalDb.WorkWithLocalDb();
 
-            TestWithDynamicType.CreateDynamic();
+            //TestWithDynamicType.CreateDynamic();
         }
 
 
