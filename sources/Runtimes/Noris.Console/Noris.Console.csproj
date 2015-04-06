@@ -66,12 +66,25 @@
       <HintPath>..\..\packages\Gelf4NLog.Target.1.0.0.2\lib\net40\Gelf4NLog.Target.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NLog">
       <HintPath>..\..\packages\NLog.3.1.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="SingletonContainer">
+      <HintPath>..\..\packages\SingletonContainer.0.2.0.0\lib\net45\SingletonContainer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -94,6 +107,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Modules\Noris.Core.Unity\Noris.Unity.csproj">
+      <Project>{b9e7c55e-ffb8-4bfd-9384-299d225ac74b}</Project>
+      <Name>Noris.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modules\Noris.Diagnostic\Noris.Diagnostic.Services\Noris.Diagnostic.csproj">
+      <Project>{cdb19c57-6342-4bfa-84a0-a0d9e3833921}</Project>
+      <Name>Noris.Diagnostic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Noris\Noris.csproj">
       <Project>{fca1a4e1-0a1a-4cd4-8f6b-bf967f18e107}</Project>
       <Name>Noris</Name>

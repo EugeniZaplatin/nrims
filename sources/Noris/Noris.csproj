@@ -95,15 +95,16 @@
     <Compile Include="Migrations\201504021636329_Initial.Designer.cs">
       <DependentUpon>201504021636329_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="NorisModule.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\ImportService.cs" />
     <Compile Include="Dao\Repositories\BaseDao.cs" />
     <Compile Include="Dao\DbConnection.cs" />
-    <Compile Include="Dao\Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\RecordService.cs" />
     <Compile Include="Utils\DynamicObjectBuilder.cs" />
     <Compile Include="Utils\Extensions.cs" />
-    <Compile Include="Utils\UnityConfigurer.cs" />
     <Compile Include="Utils\IdentifierProvider.cs" />
     <Compile Include="Utils\SequentialGuidGenerator.cs" />
   </ItemGroup>

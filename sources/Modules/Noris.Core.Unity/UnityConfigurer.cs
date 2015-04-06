@@ -21,11 +21,6 @@ namespace Noris.Core.Unity
             //container.RegisterType<DbConnection>(new PerRequestLifetimeManager(), new InjectionFactory(c => new DbConnection()));
             container.RegisterType(typeof(IPrincipal), typeof(NullPrincipal));
 
-            //Регистрируются зависимости уровня ядра
-            //_registerTypes(typeof(BaseDao<,,>).Assembly, container); //Репозитории
-            //... Сервисы
-
-
             //Регистрируются зависимости уровня прикладного модуля
             foreach (var assembly in assemblies)
             {
@@ -94,21 +89,11 @@ namespace Noris.Core.Unity
                                 var c = container.RegisterType(a.ForInterface, t.type);
                             }
 
-                            //TODO Не понятно что происходит в этом коде. Из-за ошибке пока отключен
-                            //if (a is ServiceAttribute) //Атрибут класса устанавливающего зависимость для сервисов
-                            //{
-                            //    c.Configure<Interception>()
-                            //        .SetInterceptorFor(a.ForInterface, new InterfaceInterceptor());
-                            //}
                         }
                     });
                 });
 
-            temp2.ForEach(x => x.componentAttributes.ForEach(a =>
-            {
-                if (a is ConfigurationAttribute)
-                    container.Resolve(x.type, null);
-            }));
+            
         }
     }
 }

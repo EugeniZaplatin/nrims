@@ -4,9 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using Microsoft.Practices.Unity;
 using Noris.Dao.Api;
+using Noris.Dao.Dao;
 using Noris.Data.Entity;
 
-namespace Noris.Dao.Dao
+namespace Noris.Dao.Repositories
 {
     /// <summary>
     /// Базовый класс для служб доступа к данным (репозиториям), обеспечивающий абстракцию

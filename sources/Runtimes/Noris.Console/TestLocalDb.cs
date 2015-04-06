@@ -3,6 +3,8 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
+using Microsoft.Practices.Unity;
+using Noris.Api.Dao;
 using Noris.Dao;
 using Noris.Dao.Migrations;
 using Noris.Dao.Repositories;
@@ -14,19 +16,33 @@ namespace Noris.RunTest
 {
     public class TestLocalDb
     {
-        public static void WorkWithLocalDb()
+        [Dependency]
+        public IDirectoryDao DirectoryDao { get; set; }
+
+        [Dependency]
+        public IDirectoryCategoryDao DirectoryCategoryDao { get; set; }
+
+        [Dependency]
+        public IDirectoryVersionDao DirectoryVersionDao { get; set; }
+        
+        [Dependency]
+        public IRecordDao RecordDao{ get; set; }
+
+        public void WorkWithLocalDb()
         {
+
+
             var currentCatalog = Path.GetDirectoryName(typeof (Program).Assembly.Location.TrimEnd('\\', '/'));
             AppDomain.CurrentDomain.SetData("DataDirectory", currentCatalog);
             Database.SetInitializer(new CreateDatabaseIfNotExists<DbConnection>());
            
-                new DbMigrator(new Configuration()).Update();
+                //new DbMigrator(new Configuration()).Update();
 
-                var directoryVersin = new DirectoryVersionDao().Add(new DirectoryVersion()
+            var directoryVersin = DirectoryVersionDao.Add(new DirectoryVersion()
                 {
                     VersionNumber = "1.0.0.0",
                     VersionDate = DateTime.Now,
-                    Directory = new DirectoryDao().Add(new Directory()
+                    Directory = DirectoryDao.Add(new Directory()
                     {
                         Name = "First directory",
                         XmlStructure = "",
@@ -34,7 +50,7 @@ namespace Noris.RunTest
                         Owner = "",
                         Responser = "",
                         FeedbackEmail = "",
-                        Category = new DirectoryCategoryDao().Add( new DirectoryCategory()
+                        Category = DirectoryCategoryDao.Add( new DirectoryCategory()
                         {
                             Name = "Medicine directories",
                             Parent = null
@@ -51,7 +67,7 @@ namespace Noris.RunTest
                     var records = Enumerable.Range(1, 10000)
                         .Select(o =>
                         {
-                            var record = new RecordDao().Add( new Record()
+                            var record = RecordDao.Add( new Record()
                             {
                                 Name = "Medicine",
                                 Id = Guid.NewGuid(),

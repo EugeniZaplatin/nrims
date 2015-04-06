@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Microsoft.Practices.Unity;
+using Noris.Api.Services;
 using Noris.Dao.Api;
 using Noris.Data.Dpo;
 using Noris.Data.Entity;
@@ -10,15 +11,6 @@ using Noris.Data.Entity;
 
 namespace Noris.Services.Bl
 {
-    /// <summary>
-    /// Specified field in listing forms and deriction of sorting data
-    /// </summary>
-    public class SortingInfo
-    {
-        public string Field { get; set; }
-        public string Direction { get; set; }
-    }
-
     /// <summary>
     /// Base class for all bisness entities which interact with database
     /// </summary>
